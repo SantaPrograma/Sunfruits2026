@@ -4,15 +4,16 @@ import Image from "next/image";
 
 export default function ProductosServicios() {
   return (
-    <div className="relative z-50 mt-6 flex gap-16 text-white">
+    <div className="relative z-50 mt-6 flex flex-col sm:flex-row gap-6 sm:gap-16 text-white">
       {/* Productos */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, x: -30 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6, delay: 1.2 }}
         className="group relative"
       >
-        <Link href="/productos"
+        <Link
+          href="/Productos"
           className="text-xs md:text-sm font-semibold uppercase border-b border-white/70 pb-1 transition-colors duration-300 hover:text-[#4ade80] hover:border-[#4ade80]"
         >
           Productos
@@ -26,11 +27,21 @@ export default function ProductosServicios() {
               <span>Uva</span>
             </li>
             <li className="flex items-center gap-2 px-4 py-1">
-              <Image src="/Index/palta.jpg" alt="Palta" width={20} height={20} />
+              <Image
+                src="/Index/palta.jpg"
+                alt="Palta"
+                width={20}
+                height={20}
+              />
               <span>Palta</span>
             </li>
             <li className="flex items-center gap-2 px-4 py-1">
-              <Image src="/Index/citricos.jpg" alt="Cítricos" width={20} height={20} />
+              <Image
+                src="/Index/citricos.jpg"
+                alt="Cítricos"
+                width={20}
+                height={20}
+              />
               <span>Cítricos</span>
             </li>
           </ul>
@@ -38,13 +49,14 @@ export default function ProductosServicios() {
       </motion.div>
 
       {/* Servicios */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, x: 30 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6, delay: 1.2 }}
         className="group relative"
       >
-        <Link href="/servicios"
+        <Link
+          href="/Servicios"
           className="text-xs md:text-sm font-semibold uppercase border-b border-white/70 pb-1 transition-colors duration-300 hover:text-[#4ade80] hover:border-[#4ade80]"
         >
           Servicios
@@ -58,19 +70,39 @@ export default function ProductosServicios() {
               <span>Uva</span>
             </li>
             <li className="flex items-center gap-2 px-4 py-1">
-              <Image src="/Index/palta.jpg" alt="Palta" width={20} height={20} />
+              <Image
+                src="/Index/palta.jpg"
+                alt="Palta"
+                width={20}
+                height={20}
+              />
               <span>Palta</span>
             </li>
             <li className="flex items-center gap-2 px-4 py-1">
-              <Image src="/Index/citricos.jpg" alt="Cítricos" width={20} height={20} />
+              <Image
+                src="/Index/citricos.jpg"
+                alt="Cítricos"
+                width={20}
+                height={20}
+              />
               <span>Cítricos</span>
             </li>
             <li className="flex items-center gap-2 px-4 py-1">
-              <Image src="/Index/arandanos.jpg" alt="Arándanos" width={20} height={20} />
+              <Image
+                src="/Index/arandanos.jpg"
+                alt="Arándanos"
+                width={20}
+                height={20}
+              />
               <span>Arándanos</span>
             </li>
             <li className="flex items-center gap-2 px-4 py-1">
-              <Image src="/Index/granada.jpg" alt="Granada" width={20} height={20} />
+              <Image
+                src="/Index/granada.jpg"
+                alt="Granada"
+                width={20}
+                height={20}
+              />
               <span>Granada</span>
             </li>
           </ul>

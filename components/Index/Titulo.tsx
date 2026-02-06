@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -7,11 +7,10 @@ import SeccionesInferiores from "./SeccionesInferiores";
 
 export default function Titulo() {
   return (
-    <div className="relative z-10 flex w-full flex-col items-center text-center text-white px-6 pt-32 md:pt-40">
-      
+    <div className="relative z-10 flex min-h-screen w-full flex-col items-center text-center text-white px-6 pt-24 md:pt-40 pb-12">
       {/* Bloque principal */}
       <div className="flex flex-col items-center">
-        <motion.span 
+        <motion.span
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 0.85, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -35,7 +34,7 @@ export default function Titulo() {
           />
         </motion.div>
 
-        <motion.p 
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
@@ -53,7 +52,6 @@ export default function Titulo() {
         <ProductosServicios />
         <SeccionesInferiores />
       </div>
-
     </div>
   );
 }

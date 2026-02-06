@@ -19,7 +19,6 @@ export default function Home() {
       {/* Overlay viñeta */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.15)_0%,rgba(0,0,0,0.60)_100%)]" />
 
-      {/* Titulo */}
       <Titulo />
     </section>
   );

@@ -1,6 +1,5 @@
-// app/page.tsx o pages/index.tsx
-import Home from "../components/Index/Home"
-import GoogleTranslate from "../components/GoogleTranslate"
+import Home from "@/components/Index/Home"
+import GoogleTranslate from "@/components/GoogleTranslate"
 
 export default function Page() {
   return (
