@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
 const growthImages = [
@@ -20,11 +20,14 @@ export default function CrecimientoProgresivo() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const delay = currentIndex === growthImages.length - 1 ? 3000 : 1000;
+    const timer = setTimeout(() => {
       setCurrentIndex((prev) => (prev + 1) % growthImages.length);
-    }, 2000);
-    return () => clearInterval(interval);
-  }, []);
+    }, delay);
+
+    return () => clearTimeout(timer);
+  }, [currentIndex]);
+
   return (
     <section
       className="relative w-full h-100 md:h-120 lg:h-140 bg-cover bg-center"
@@ -54,25 +57,22 @@ export default function CrecimientoProgresivo() {
         </motion.div>
 
         {/* Contenedor de imagen */}
-        <div className="relative w-full max-w-4xl h-75 md:h-100 bg-black/30 backdrop-blur-md rounded-2xl flex items-center justify-center overflow-hidden">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentIndex}
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.5 }}
-              className="relative w-80 h-80 md:w-180 md:h-180 shrink-0 p-2"
-            >
-              <Image
-                src={growthImages[currentIndex]}
-                alt={`Crecimiento ${currentIndex + 1}`}
-                fill
-                className="object-contain"
-              />
-            </motion.div>
-          </AnimatePresence>
-        </div>
+        <motion.div
+          initial={{ scale: 0.2, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="relative w-full max-w-4xl h-75 md:h-100 bg-black/30 backdrop-blur-md rounded-2xl flex items-center justify-center overflow-hidden"
+        >
+          <div className="relative w-80 h-80 md:w-180 md:h-180 shrink-0 p-2">
+            <Image
+              src={growthImages[currentIndex]}
+              alt={`Crecimiento ${currentIndex + 1}`}
+              fill
+              className="object-contain"
+            />
+          </div>
+        </motion.div>
       </div>
     </section>
   );
