@@ -30,8 +30,7 @@ export default function Titulo() {
             width={420}
             height={120}
             priority
-            className="mb-8 w-[92vw] max-w-170 h-auto"
-          />
+            className="mb-6 w-11/12 sm:w-3/4 md:w-1/2 lg:w-[420px] h-auto" />
         </motion.div>
 
         <motion.p
