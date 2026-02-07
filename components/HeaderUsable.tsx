@@ -50,10 +50,10 @@ export default function HeaderUsable() {
             {isNosotrosOpen && (
               <div className="absolute top-full left-0 pt-2">
                 <div className="w-56 rounded-md bg-black/40 backdrop-blur-xl py-2 border border-white/20">
-                  <Link href="/nosotros/sunfruits" className="block px-4 py-2 hover:text-[#4ade80]">
+                  <Link href="/Nosotros" className="block px-4 py-2 hover:text-[#4ade80]">
                     Sobre Sunfruits
                   </Link>
-                  <Link href="/nosotros/ods" className="block px-4 py-2 hover:text-[#4ade80]">
+                  <Link href="/Compromiso" className="block px-4 py-2 hover:text-[#4ade80]">
                     Objetivo de Desarrollo Sostenible
                   </Link>
                 </div>
@@ -61,7 +61,7 @@ export default function HeaderUsable() {
             )}
           </div>
 
-          <Link href="/novedades" className="hover:text-[#4ade80]">
+          <Link href="/Novedades" className="hover:text-[#4ade80]">
             Novedades
           </Link>
 
@@ -101,13 +101,13 @@ export default function HeaderUsable() {
             <Link href="/Servicios" onClick={() => setIsMobileMenuOpen(false)}>
               Nuestros Servicios
             </Link>
-            <Link href="/nosotros/sunfruits" onClick={() => setIsMobileMenuOpen(false)}>
+            <Link href="/Nosotros" onClick={() => setIsMobileMenuOpen(false)}>
               Sobre Sunfruits
             </Link>
-            <Link href="/nosotros/ods" onClick={() => setIsMobileMenuOpen(false)}>
+            <Link href="/Compromiso" onClick={() => setIsMobileMenuOpen(false)}>
               Objetivo de Desarrollo Sostenible
             </Link>
-            <Link href="/novedades" onClick={() => setIsMobileMenuOpen(false)}>
+            <Link href="/Novedades" onClick={() => setIsMobileMenuOpen(false)}>
               Novedades
             </Link>
             <Link

@@ -30,7 +30,8 @@ export default function Titulo() {
             width={420}
             height={120}
             priority
-            className="mb-6 w-11/12 sm:w-3/4 md:w-1/2 lg:w-[420px] h-auto" />
+            className="mb-6 w-11/12 sm:w-3/4 md:w-1/2 lg:w-105 h-auto"
+          />
         </motion.div>
 
         <motion.p
@@ -39,8 +40,11 @@ export default function Titulo() {
           transition={{ duration: 0.8, delay: 0.9 }}
           className="max-w-2xl text-lg md:text-2xl font-light tracking-wide text-white/90 italic mb-12"
         >
-          Frutos de la tierra y el sol, llevados al mundo con{" "}
-          <span className="text-[#4ade80] not-italic font-medium">
+          Frutos de la tierra y el sol, llevados al mundo con
+          <span
+            className="text-[#4ade80] not-italic font-medium"
+            style={{ textShadow: "0 1px 8px rgba(0,0,0,0.85)" }}
+          >
             estándares de excelencia.
           </span>
         </motion.p>

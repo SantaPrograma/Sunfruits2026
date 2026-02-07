@@ -14,7 +14,7 @@ export default function SeccionesInferiores() {
       >
         <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12 text-xs md:text-sm font-semibold uppercase tracking-wide text-white">
           {/* Nuestra Historia */}
-          <Link href="/historia" className="flex items-center gap-3">
+          <Link href="/Nosotros" className="flex items-center gap-3">
             <BookOpen className="h-4 w-4 text-orange-400" />
             <span className="transition-colors duration-300 hover:text-orange-400">
               Nuestra Historia
@@ -25,7 +25,7 @@ export default function SeccionesInferiores() {
           <span className="hidden md:block h-6 w-px bg-white/50" />
 
           {/* Novedades */}
-          <Link href="/novedades" className="flex items-center gap-3">
+          <Link href="/Novedades" className="flex items-center gap-3">
             <Megaphone className="h-4 w-4 text-orange-400" />
             <span className="transition-colors duration-300 hover:text-orange-400">
               Novedades
@@ -36,7 +36,7 @@ export default function SeccionesInferiores() {
           <span className="hidden md:block h-6 w-px bg-white/50" />
 
           {/* Nuestro Compromiso */}
-          <Link href="/compromiso" className="flex items-center gap-3">
+          <Link href="/Compromiso" className="flex items-center gap-3">
             <ShieldCheck className="h-4 w-4 text-orange-400" />
             <span className="transition-colors duration-300 hover:text-orange-400">
               Nuestro Compromiso
