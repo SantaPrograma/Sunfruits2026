@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const images = [
   "/Nosotros/image2.jpg",
@@ -12,15 +12,26 @@ const images = [
 
 export default function Cultura() {
   const [index, setIndex] = useState(0);
+  const [isHovering, setIsHovering] = useState(false);
 
   const next = () => setIndex((prev) => (prev + 1) % images.length);
   const prev = () =>
     setIndex((prev) => (prev - 1 + images.length) % images.length);
 
+  useEffect(() => {
+    if (isHovering) return;
+
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % images.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [isHovering]);
+
   return (
-    <section className="relative w-full py-24 overflow-hidden">
+    <section className="relative w-full min-h-screen py-24 overflow-hidden">
       {/* Fondo */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 min-h-full">
         <Image
           src="/Nosotros/bg-tierra.jpg"
           alt=""
@@ -41,7 +52,7 @@ export default function Cultura() {
         >
           <Image src="/Servicios/icon.png" alt="" width={28} height={28} />
           <h2 className="text-white font-semibold tracking-wide text-xl sm:text-2xl">
-            Nuestros Servicios
+            Nuestra Cultura
           </h2>
         </motion.div>
 
@@ -49,6 +60,8 @@ export default function Cultura() {
         <div className="grid grid-cols-1 gap-14 md:grid-cols-2 md:items-center">
           {/* Carrusel */}
           <motion.div
+            onMouseEnter={() => setIsHovering(true)}
+            onMouseLeave={() => setIsHovering(false)}
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -62,6 +75,21 @@ export default function Cultura() {
                 fill
                 className="object-cover transition-all duration-500"
               />
+
+              {/* Indicador de pausa */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{
+                  opacity: isHovering ? 1 : 0,
+                  scale: isHovering ? 1 : 0.9,
+                }}
+                transition={{ duration: 0.25 }}
+                className="pointer-events-none absolute top-3 right-3 z-10"
+              >
+                <div className="flex items-center justify-center rounded-xl bg-black/65 px-3 py-2 text-white text-lg font-semibold shadow-lg">
+                  ⏸
+                </div>
+              </motion.div>
             </div>
 
             {/* Controles */}
