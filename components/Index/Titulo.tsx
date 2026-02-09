@@ -41,6 +41,7 @@ export default function Titulo() {
           className="max-w-2xl text-lg md:text-2xl font-light tracking-wide text-white/90 italic mb-12"
         >
           Frutos de la tierra y el sol, llevados al mundo con
+          <br />
           <span
             className="text-[#4ade80] not-italic font-medium"
             style={{ textShadow: "0 1px 8px rgba(0,0,0,0.85)" }}

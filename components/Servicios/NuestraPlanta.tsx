@@ -64,9 +64,7 @@ export default function NuestraPlanta() {
               width={36}
               height={36}
             />
-            <h2
-              className="text-white font-semibold tracking-wide text-lg sm:text-xl md:text-2xl"
-            >
+            <h2 className="text-white font-semibold tracking-wide text-lg sm:text-xl md:text-2xl">
               Nuestra Planta
             </h2>
           </motion.div>
@@ -92,9 +90,7 @@ export default function NuestraPlanta() {
         </motion.div>
 
         {/* Cards */}
-        <div
-          className="mt-12 grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 pb-16"
-        >
+        <div className="mt-12 grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 pb-16">
           {cards.map((card, index) => (
             <motion.div
               key={index}
@@ -102,12 +98,9 @@ export default function NuestraPlanta() {
               initial={{ opacity: 0, scale: 0.92 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, amount: 0.3 }}
-              transition={{
-                duration: 0.6,
-                ease: "easeOut",
-              }}
-              className="group relative aspect-square rounded-2xl overflow-hidden border border-white/20
-               bg-white/5 flex items-center justify-center focus:outline-none"
+              transition={{ duration: 0.6, ease: "easeOut", delay: 1 }}
+              className="group relative aspect-square rounded-2xl overflow-hidden border border-white/20 
+              bg-white/5 flex items-center justify-center focus:outline-none"
             >
               <Image
                 src={card.image}
