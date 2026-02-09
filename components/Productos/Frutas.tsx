@@ -72,7 +72,7 @@ export default function Frutas({ children }: FrutasProps) {
       />
 
       {/* Overlay oscuro */}
-      <div className="absolute inset-0 bg-black/70" />
+      <div className="absolute inset-0 bg-black/50" />
 
       {/* Contenido */}
       <div className="relative z-10 w-full px-6 md:px-12 lg:px-20 pt-20">
